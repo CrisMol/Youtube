@@ -1,0 +1,140 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+body{
+  font-family: arial;
+  overflow-x: hidden;
+  background: #f2f2f2;
+}
+
+.navigation{
+  background: #fff;
+  padding: 15px 20px;
+}
+
+.navigation .bar{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90vw;
+  background: #fff;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+  padding: 5px 20px;
+}
+
+
+.navigation .bar .links{
+  display: flex;
+  transition: all 0.5s;
+}
+
+.navigation .bar .brand{
+  font-weight: 900;
+  color: #ee2a24;
+}
+.navigation .bar .links .link a.active{
+  color: #ee2a24;
+}
+.navigation .bar .links .link a{
+  text-decoration: none;
+  display: inline-flex;
+  padding: 10px 15px;
+  color: #000;
+  font-size: 12px;
+}
+
+
+.menu{
+  position: relative;
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  display: none;
+}
+
+.menu #bar{
+  position: relative;
+  height: 2px;
+  width: 30px;
+  background: #000;
+  transition: transform 0.5s;
+}
+
+
+.menu #bar::before{
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 30px;
+  background: #000;
+  top: -8px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform 0.5s;
+}
+
+.menu #bar::after{
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 30px;
+  background: #000;
+  top: 8px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform 0.5s;
+}
+
+
+.menu.open #bar{background: transparent;}
+
+.menu.open #bar::before{
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.menu.open #bar::after{
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+
+
+@media (max-width: 640px) {
+  .menu{display: flex; opacity: 1; visibility: visible;}
+  .navigation .bar .links{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background: #fff;
+    top: 70px;
+    right: -100vw;
+    padding: 10px 15px;
+  }
+  .navigation .bar .links.open{
+    right: 0;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+/* space */
