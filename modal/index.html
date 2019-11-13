@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Modal</title>
+  <link rel="stylesheet" href="app.css">
+</head>
+<body>
+  <div class="container">
+    <div class="buttons">
+      <button id="show_modal">Launch Modal</button>
+    </div>
+
+    <div class="overlay hide"></div>
+    <div class="modal hide">
+      <div class="type success"></div>
+      <div class="title">
+        <h2>Congrats</h2>
+      </div>
+      <div class="description">
+        <p>Well done, Click Ok to continue</p>
+      </div>
+      <div class="action-buttons">
+        <button id="hide_modal">OK</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js" charset="utf-8"></script>
+</body>
+</html>
